@@ -9,6 +9,7 @@ import {
 import { Link } from 'react-router-dom';
 import UserProfile from '../assets/profile.png';
 import { Logo } from './Logo';
+import ThemeSwitch from './Switch';
 
 export const Navbar = () => {
     const user = {};
@@ -32,6 +33,18 @@ export const Navbar = () => {
         </div>
 
         <Logo />
+
+        <div className='hidden md-flex gap-14 items-center'>
+            <ul className='flex gap-8 text-base text-black dark:text-white'>
+                <Link to='/'>Home</Link>
+                <Link to=''>Contact</Link>
+                <Link to=''>About</Link>
+            </ul>
+
+            {/** Theme Switch */}
+
+            <ThemeSwitch />
+        </div>
     </div>
   )
 }

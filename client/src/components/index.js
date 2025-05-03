@@ -8,6 +8,7 @@ import Card from './Card';
 import PopularPost from './PopularPost';
 import PopularWriter from './PopularWriter';
 import { Navbar } from './Navbar';
+import Switch from './Switch';
 
 export{
     Loading, 
@@ -19,5 +20,6 @@ export{
     Card, 
     PopularPost, 
     PopularWriter,
-    Navbar
+    Navbar,
+    Switch
 };
