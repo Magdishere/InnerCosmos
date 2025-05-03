@@ -3,6 +3,11 @@ import {CATEGORIES, posts} from '../utils/dummyData';
 import {Banner} from '../components';
 import { Link } from 'react-router-dom';
 import { Card } from '../components/Card';
+import {PopularPost} from '../components';
+import {PopularWriter} from '../components';
+import {Pagination} from '../components/';
+import { popular } from '../utils/dummyData';
+
 
 
 const Home = () => {
@@ -11,6 +16,8 @@ const Home = () => {
   const [page, setPage] =  useState(1);
   
   const randomIndex = Math.floor(Math.random() * posts.length);
+
+  const handlePageChange = () => {};
 
   if(posts.length <1) 
     return (
@@ -49,8 +56,18 @@ const Home = () => {
                 <Card key={post?._id} post = {post} index = {index}/>
               ))
             }
+            <div className='w-full flex items-center justify-center'>
+              {/* <Pagination totalPages={numOfPages} onPageChange={handlePageChange}/> */}
+            </div>
           </div>
+
           {/* Right Side*/}
+          <div className='w-full md:w-1/4 flex flex-col gap-y-12'>
+            {/** Popular Posts */}
+            <PopularPost posts={popular?.posts}/>
+            {/** Popular Writers */}
+            <PopularWriter data={popular?.writers}/>
+          </div>
       </div>
     </div>
   </div>

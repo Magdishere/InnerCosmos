@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Markdown from 'markdown-to-jsx';
+import {AiOutlineArrowRight} from 'react-icons/ai';
 
 export const Card = ({post, index}) => {
   return (
@@ -32,6 +33,13 @@ export const Card = ({post, index}) => {
                     {post?.desc?.slice(0, 160) + '...'}
                 </Markdown>
             </di>
+            <Link 
+            to={`${post?.slug}/${post?._id}`}
+            className='flex items-center text-black dark:text-white'
+            >
+                <span>Read More</span>
+                <AiOutlineArrowRight />
+            </Link>
         </div>
     </div>
   );
