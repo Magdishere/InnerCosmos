@@ -34,7 +34,7 @@ export const Navbar = () => {
 
         <Logo />
 
-        <div className='hidden md-flex gap-14 items-center'>
+        <div className='hidden md:flex gap-14 items-center'>
             <ul className='flex gap-8 text-base text-black dark:text-white'>
                 <Link to='/'>Home</Link>
                 <Link to=''>Contact</Link>

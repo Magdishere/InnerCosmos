@@ -8,7 +8,7 @@ import Card from './Card';
 import PopularPost from './PopularPost';
 import PopularWriter from './PopularWriter';
 import { Navbar } from './Navbar';
-import Switch from './Switch';
+import ThemeSwitch from './Switch';
 
 export{
     Loading, 
@@ -21,5 +21,5 @@ export{
     PopularPost, 
     PopularWriter,
     Navbar,
-    Switch
+    ThemeSwitch
 };

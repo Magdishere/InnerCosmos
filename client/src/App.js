@@ -2,6 +2,8 @@ import {Routes, Route, Outlet} from 'react-router-dom';
 import { BlogDetails, CategoriesPage, Home, WriterPage, SignupPage, LoginPage } from './pages';
 import { Loading } from './components/Loading';
 import { Navbar } from './components';
+import useStore from './store';
+import { useState } from 'react';
 
 function Layout() {
   return (
@@ -18,8 +20,8 @@ function Layout() {
 }
 
 function App() {
-  const theme = 'dark';
-  const isLoading = false;
+
+  const {theme, isLoading} = useStore();
 
   return (
     <main className={theme}>

@@ -29,7 +29,7 @@ const Banner = ({post}) => {
                 </div>
                 <Link 
                 to={`${post?.slug}/${post?._id}`}
-                className='w-fit bg-blue-600 hover:dark:bg-blue-900 hover:bg-blue-900 bg-opacity-20 text-blue-700 px-4 py-1 
+                className='w-fit bg-blue-600 hover:dark:bg-blue-900 hover:text-white hover:bg-blue-700 bg-opacity-20 text-blue-700 px-4 py-1 
                 rounded text-sm cursor-pointer'>
                 Read More...
                 </Link>
